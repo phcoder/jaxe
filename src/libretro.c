@@ -190,14 +190,14 @@ static struct retro_input_descriptor input_desc[] = {
 
 void retro_set_environment(retro_environment_t fn)
 {
-  static const struct retro_system_content_info_override content_overrides[] = {
-      {
-	  VALID_EXTENSIONS, /* extensions */
-	  false,     /* need_fullpath */
-	  true       /* persistent_data */
-      },
-      { NULL, false, false }
-   };
+    static const struct retro_system_content_info_override content_overrides[] = {
+	{
+	    VALID_EXTENSIONS, /* extensions */
+	    false,     /* need_fullpath */
+	    true       /* persistent_data */
+	},
+	{ NULL, false, false }
+    };
     environ_cb = fn;
 
     fn(RETRO_ENVIRONMENT_SET_VARIABLES, variables);
